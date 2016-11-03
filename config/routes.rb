@@ -3,9 +3,11 @@ Rails.application.routes.draw do
 
   get 'user/show'
 
-  get 'user/new'
+  #get 'user/new'
+  get  '/signup',  to: 'users#new'
 
-  get 'user/create'
+  post '/signup',  to: 'users#create'
+
 
   get 'user/edit'
 

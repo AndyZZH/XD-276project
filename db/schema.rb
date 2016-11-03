@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20161101235854) do
     t.string   "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
+  end  
 
   create_table "users", force: :cascade do |t|
     t.string   "fname"
@@ -35,5 +35,5 @@ ActiveRecord::Schema.define(version: 20161101235854) do
     t.datetime "updated_at",      null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
-
+  
 end
