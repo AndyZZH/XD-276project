@@ -28,7 +28,6 @@
 
 <!--User Location -->
 <script type="text/javascript">
-
   // getLocation - uses geolocation to obtain user location
   function getLocation()
   {
@@ -37,20 +36,17 @@
     else
       alert("Geolocation is not supported by this browser.");
   }
-
   // setGeoCookie - creates a cookie to store user location
   function setGeoCookie(position)
   {
     var cookie_val = position.coords.latitude + "|" + position.coords.longitude;
     document.cookie = "lat_lng=" + escape(cookie_val);
   }
-
   // handleError - gets called when geolocation permission is denied by user
   function handleError(err)
   {
      // err.code: 1 = permission denied, 2 = pos unavailable, 3 = timeout
   }
-
   getLocation(); // Ask for user location
 </script>
 
@@ -62,25 +58,19 @@ var ulat = <%= @user_lat %>;
 var ulng = <%= @user_lng %>;
 var dlat = <%= @destlat %>;
 var dlong = <%= @destlong %>;
-
 var p1 = new google.maps.LatLng(ulat, ulng);
 var p2 = new google.maps.LatLng(dlat,dlong);
-
 var d = calcDistance(p1, p2);
-
-
 	if(d <= 0.1){
 		document.getElementById("confirm").innerHTML = "You are at the destination!";
 		document.getElementById("success").style.display="block";
 	}else{
 		document.getElementById("confirm").innerHTML = "You are currently "+ d +"km from the destination";
 	}
-
 //calculates distance between two points in km's
 	function calcDistance(p1, p2) {
  	 return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2) / 1000).toFixed(2);
 	}
-
 </script>
 
 
@@ -88,7 +78,6 @@ var d = calcDistance(p1, p2);
 <script type="text/javascript">
 var directionsDisplay = new google.maps.DirectionsRenderer();
 var directionsService = new google.maps.DirectionsService();
-
 function calcRoute(position) {
   var usrlat = <%= @user_lat %>;
   var usrlong = <%= @user_lng %>;
@@ -96,22 +85,18 @@ function calcRoute(position) {
   var buslong = <%= @destlong %>;
   var origin      = new google.maps.LatLng(usrlat,usrlong);
   var destination = new google.maps.LatLng(buslat, buslong);
-
   var request = {
     origin:      origin,
     destination: destination,
     travelMode:  google.maps.TravelMode.DRIVING
   };
-
   directionsService.route(request, function(response, status) {
     if (status == google.maps.DirectionsStatus.OK) {
       directionsDisplay.setDirections(response);
     }
   });
 }
-
 calcRoute();
-
 var handler = Gmaps.build('Google');
 handler.buildMap({ internal: {id: 'directions'}}, function(){
   directionsDisplay.setMap(handler.getMap());
