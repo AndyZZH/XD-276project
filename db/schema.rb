@@ -24,44 +24,16 @@ ActiveRecord::Schema.define(version: 20161101235854) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tokimons", force: :cascade do |t|
-    t.string   "tokiname"
-    t.string   "tokicolour"
-    t.integer  "tokiweight"
-    t.integer  "tokiheight"
-    t.integer  "tokifly"
-    t.integer  "tokifight"
-    t.integer  "tokiwater"
-    t.integer  "tokielectric"
-    t.integer  "tokiice"
-    t.integer  "tokitotal"
-    t.integer  "trainer_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "trainers", force: :cascade do |t|
-    t.string   "trainame"
-    t.integer  "trailevel"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
-    t.string   "name"
+    t.string   "fname"
+    t.string   "lname"
     t.string   "email"
+    t.string   "password_digest"
+    t.integer  "point"
+    t.integer  "location_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.string   "password_digest"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
-  end
-
-  create_table "widgets", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.integer  "stock"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
 end
