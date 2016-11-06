@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  root  'static_pages#home'
+  
   get   'static_pages/home'
   get   'static_pages/about'
   get   'sessions/new'
+  get 'random/index'
+  get 'random/search'
+  post 'random/search'
   
   get  '/signup',  to: 'users#new'
 
@@ -15,6 +18,7 @@ Rails.application.routes.draw do
   get 'geomap/index'
   get 'geomap/directions'
   
+  root  'random#index'
 
   resources :users
 
