@@ -15,12 +15,6 @@ ActiveRecord::Schema.define(version: 20161101235854) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "article", primary_key: "article_id", id: :bigserial, force: :cascade do |t|
-    t.string   "article_name", limit: 20, null: false
-    t.text     "article_desc",            null: false
-    t.datetime "date_added"
-  end
-
   create_table "locations", force: :cascade do |t|
     t.string   "name"
     t.integer  "latitude"
@@ -31,38 +25,35 @@ ActiveRecord::Schema.define(version: 20161101235854) do
   end
 
   create_table "tokimons", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.integer  "weight"
-    t.integer  "height"
-    t.integer  "fly"
-    t.integer  "fight"
-    t.integer  "fire"
-    t.integer  "water"
-    t.integer  "electric"
-    t.integer  "ice"
-    t.integer  "total"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "tokiname"
+    t.string   "tokicolour"
+    t.integer  "tokiweight"
+    t.integer  "tokiheight"
+    t.integer  "tokifly"
+    t.integer  "tokifight"
+    t.integer  "tokiwater"
+    t.integer  "tokielectric"
+    t.integer  "tokiice"
+    t.integer  "tokitotal"
+    t.integer  "trainer_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "trainers", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.integer  "level"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "trainame"
+    t.integer  "trailevel"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "fname"
-    t.string   "lname"
+    t.string   "name"
     t.string   "email"
-    t.string   "password_digest"
-    t.integer  "point"
-    t.integer  "location_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "password_digest"
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
   create_table "widgets", force: :cascade do |t|

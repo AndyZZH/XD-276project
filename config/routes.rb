@@ -1,30 +1,20 @@
 Rails.application.routes.draw do
-  get 'user/index'
-
-  get 'user/show'
-
-  #get 'user/new'
+  root  'static_pages#home'
+  get   'static_pages/home'
+  get   'static_pages/about'
+  get   'sessions/new'
+  
   get  '/signup',  to: 'users#new'
 
   post '/signup',  to: 'users#create'
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
-  delete '/logout',  to: 'sessions#destroy'
-
-
-
-  get 'user/edit'
-
-  get 'user/update'
-
-  get 'user/delete'
-
-  get 'user/destroy'
+  delete '/logout',  to: 'sessions#destroy'  
 
   get 'geomap/index'
   get 'geomap/directions'
-  root 'geomap#index'
+  
 
   resources :users
 
