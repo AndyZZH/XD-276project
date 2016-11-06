@@ -17,13 +17,13 @@
 default: &default
   adapter: postgresql
 #
-#   # encoding: unicode
+  encoding: unicode
 #   # # For details on connection pooling, see rails configuration guide
-#   # # http://guides.rubyonrails.org/configuring.html#database-pooling
-#   # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-#   # host: localhost
-#   # user: groupxd
-#   # password: 276
+#   # # http://guides.rubyonrails.org/configuring.html#database-pooling 
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost 
+  user: groupxd
+  password: 276
 #
   #Andy setting in c9 enviorment
   encoding: SQL_ASCII
@@ -37,10 +37,17 @@ default: &default
 #   database: XD-276project_development
 
   # James
+<<<<<<< HEAD
   # default: &default
   #   adapter: postgresql
   #   encoding: unicode
   #   pool: 5
+=======
+#default: &default
+#  adapter: postgresql
+#  encoding: unicode
+#  pool: 5
+>>>>>>> 22d2d6b45e5f938bf7617a2563a51e2761a194c1
 
 development:
   <<: *default
