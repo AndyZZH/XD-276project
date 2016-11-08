@@ -24,25 +24,41 @@ ActiveRecord::Schema.define(version: 20161101235854) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "people", force: :cascade do |t|
+    t.string   "pname"
+    t.integer  "age"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "things", force: :cascade do |t|
+    t.string   "tname"
+    t.text     "description"
+    t.integer  "person_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "tokimons", force: :cascade do |t|
-    t.string   "tokiname"
-    t.string   "tokicolour"
-    t.integer  "tokiweight"
-    t.integer  "tokiheight"
-    t.integer  "tokifly"
-    t.integer  "tokifight"
-    t.integer  "tokiwater"
-    t.integer  "tokielectric"
-    t.integer  "tokiice"
-    t.integer  "tokitotal"
+    t.string   "toname"
+    t.integer  "weight"
+    t.integer  "height"
+    t.integer  "fly"
+    t.integer  "fight"
+    t.integer  "fire"
+    t.integer  "water"
+    t.integer  "electric"
+    t.integer  "ice"
+    t.integer  "total"
     t.integer  "trainer_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "trainers", force: :cascade do |t|
-    t.string   "trainame"
-    t.integer  "trailevel"
+    t.string   "trname"
+    t.integer  "level"
+    t.integer  "trainer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -56,6 +72,7 @@ ActiveRecord::Schema.define(version: 20161101235854) do
     t.integer  "location_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
   create_table "widgets", force: :cascade do |t|
