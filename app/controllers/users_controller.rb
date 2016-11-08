@@ -1,9 +1,17 @@
 class UsersController < ApplicationController
+<<<<<<< HEAD
+=======
+
+>>>>>>> 10ef3824a0a8e79862793c8f8a9d9b390df6b975
   def index
   end
 
   def show
     @user = User.find(params[:id])
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 10ef3824a0a8e79862793c8f8a9d9b390df6b975
   end
 
   def new
@@ -11,17 +19,38 @@ class UsersController < ApplicationController
   end
 
   def create
+<<<<<<< HEAD
     @user = User.new(user_params)
     if @user.save
       # Handle a successful save.
       log_in @user
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user
+=======
+    @user = User.new(user_params)  
+    if @user.save      
+      flash[:success] = "Welcome to the RestaRun App!"
+      redirect_to @user
+
+>>>>>>> 10ef3824a0a8e79862793c8f8a9d9b390df6b975
     else
       render 'new'
     end
   end
 
+<<<<<<< HEAD
+=======
+  private
+
+    def user_params
+      params.require(:user).permit(:fname, :lname, :email, :password,
+                                   :password_confirmation)
+    end
+
+
+
+
+>>>>>>> 10ef3824a0a8e79862793c8f8a9d9b390df6b975
   def edit
   end
 
@@ -33,6 +62,7 @@ class UsersController < ApplicationController
 
   def destroy
   end
+<<<<<<< HEAD
   
   private
 
@@ -41,3 +71,7 @@ class UsersController < ApplicationController
                                    :password_confirmation)
     end
 end
+=======
+
+end
+>>>>>>> 10ef3824a0a8e79862793c8f8a9d9b390df6b975

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 <script src="//maps.google.com/maps/api/js?key=AIzaSyBqCYFsvqoNiLgEDx1k0z7x7FNEaeThT3c"></script>
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
+=======
+<% provide(:title, "RestaRun") %>
+>>>>>>> 10ef3824a0a8e79862793c8f8a9d9b390df6b975
 <div class="contrainer">
 
   <% if @err_msg %>
@@ -11,10 +15,15 @@
 
   <%= form_tag random_search_path, class: "form-inline" do %>
     <div class="form-group">
+<<<<<<< HEAD
+=======
+     <label>Welcome to the RestaRun App!</label><br>
+>>>>>>> 10ef3824a0a8e79862793c8f8a9d9b390df6b975
       <label>How many minutes do you want to walk?</label>
       <%= select_tag :distance,
        options_for_select([['10', 800], ['20', 1600], ['30', 2400], ['60', 4800]]),
        class: "form-control" %>
+<<<<<<< HEAD
     </div>
 
     <%= submit_tag 'Random', class: "btn btn-primary" %>
@@ -23,6 +32,17 @@
 </div>
 
 <script type="text/javascript">
+=======
+    
+
+    <%= submit_tag 'Random', class: "btn btn-primary" %>
+  <% end %>
+</div>
+</div>
+
+<script type="text/javascript">
+
+>>>>>>> 10ef3824a0a8e79862793c8f8a9d9b390df6b975
   // getLocation - uses geolocation to obtain user location
   function getLocation()
   {
@@ -31,16 +51,30 @@
     else
       alert("Geolocation is not supported by this browser.");
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 10ef3824a0a8e79862793c8f8a9d9b390df6b975
   // setGeoCookie - creates a cookie to store user location
   function setGeoCookie(position)
   {
     var cookie_val = position.coords.latitude + "|" + position.coords.longitude;
     document.cookie = "lat_lng=" + escape(cookie_val);
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 10ef3824a0a8e79862793c8f8a9d9b390df6b975
   // handleError - gets called when geolocation permission is denied by user
   function handleError(err)
   {
      // err.code: 1 = permission denied, 2 = pos unavailable, 3 = timeout
   }
+<<<<<<< HEAD
   getLocation(); // Ask for user location
 </script>
+=======
+
+  getLocation(); // Ask for user location
+</script>
+>>>>>>> 10ef3824a0a8e79862793c8f8a9d9b390df6b975

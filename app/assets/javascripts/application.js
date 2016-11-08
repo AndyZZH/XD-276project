@@ -12,8 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+<<<<<<< HEAD
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require underscore
 //= require gmaps/google
 //= require_tree .
+=======
+//= require bootstrap.min
+//= require turbolinks
+//= require underscore
+//= require gmaps/google
+//= require_tree .
+>>>>>>> 10ef3824a0a8e79862793c8f8a9d9b390df6b975

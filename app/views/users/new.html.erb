@@ -1,8 +1,13 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 10ef3824a0a8e79862793c8f8a9d9b390df6b975
 <% provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
+<<<<<<< HEAD
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
 
@@ -16,10 +21,34 @@
       <%= f.password_field :password, class: 'form-control' %>
 
       <%= f.label :password_confirmation, "Confirmation" %>
+=======
+        <%= form_for(User.new, url: signup_path) do |f| %>
+
+          <%= render 'shared/error_messages' %>
+
+      <%= f.label :fname, "First name:" %>
+           <%= f.text_field :fname, class: 'form-control' %>
+
+      <%= f.label :lname, "Last name:" %>
+           <%= f.text_field :lname, class: 'form-control' %>
+
+
+      <%= f.label :email, "Email:" %>
+           <%= f.email_field :email, class: 'form-control' %>
+
+
+      <%= f.label :password, "Password:" %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label :password_confirmation, "Password Confirmation:" %>
+>>>>>>> 10ef3824a0a8e79862793c8f8a9d9b390df6b975
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
+<<<<<<< HEAD
   
+=======
+>>>>>>> 10ef3824a0a8e79862793c8f8a9d9b390df6b975

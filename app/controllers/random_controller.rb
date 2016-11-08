@@ -50,6 +50,7 @@ class RandomController < ApplicationController
 
       end
     end
+<<<<<<< HEAD
 
     def accept
 
@@ -78,3 +79,7 @@ class RandomController < ApplicationController
     end
     helper_method :distance_between
   end
+=======
+  end
+
+>>>>>>> 10ef3824a0a8e79862793c8f8a9d9b390df6b975
