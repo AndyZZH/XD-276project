@@ -1,28 +1,32 @@
 <% provide(:title, @user.fname) %>
 <h1>
-  <%= gravatar_for @user %>
-  <%= @user.fname %>
-</h1>
+  <%= gravatar_for @user %>  
+</h1><br><br>
 
-<%= @user.fname %>, <%= @user.email %>
-<h1>Your have <%= @user.point %> points</h1>
+<table class=" table table-striped sortable">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email Adress</th>
+      <th>Points</th>
+    </tr>
+  </thead>
 
-
-<h2 align="left">Locations visited:</h2>
-
-<% @user.locations.each do |location| %>
-
-  <h1><%= location.name %></h1>
-      <% if (location.imgurl) %>
-        <p> <%= image_tag location.imgurl, class: "img-thumbnail" %> </p>
-      <% else %>
-      
-        <p><%= image_tag 'http://bit.ly/2fkkakw', class: "img-thumbnail" %></p>
-      <% end %>
-      <p>Visited At <%= location.timestamp %></p>
-  <br />
-<% end %>
-
+ <tbody>
+   
+     <tr>
+      <td><%= @user.fname %></td>
+      <td><%= @user.lname %></td>
+      <td><%= @user.email %></td>
+      <% if @user.point != nil %>
+      <td><%= @user.point %></td>
+      <%else%>
+      <td><%=0 %>
+      <%end%>
+    </tr>
+   
+ </tbody>
 
 
 
