@@ -10,10 +10,89 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161117055333) do
+ActiveRecord::Schema.define(version: 20161121194803) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "articles", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "year"
+    t.string   "semester"
+    t.string   "faculty"
+    t.string   "number"
+    t.string   "section"
+    t.string   "instructor"
+    t.string   "schedule"
+    t.string   "description"
+    t.string   "unit"
+    t.string   "Unit"
+    t.string   "CourseUrl"
+    t.string   "designation"
+    t.string   "calender"
+  end
+
+  create_table "courses_users", force: :cascade do |t|
+    t.integer "course_id"
+    t.integer "user_id"
+  end
+
+  create_table "d_courses", force: :cascade do |t|
+    t.string   "dCourseNumber"
+    t.string   "dTitle"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "d_details", force: :cascade do |t|
+    t.string   "dProfessor"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "DSchedule"
+    t.string   "dUnit"
+    t.string   "dDesignation"
+    t.string   "sectioncode"
+    t.string   "calender"
+  end
+
+  create_table "d_faculties", force: :cascade do |t|
+    t.string   "dSubject"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "d_sections", force: :cascade do |t|
+    t.string   "dSectionNumber"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "d_semesters", force: :cascade do |t|
+    t.string   "dSemesterSeasons"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "d_years", force: :cascade do |t|
+    t.string   "dYearNumber"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "faculties", force: :cascade do |t|
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "name"
+    t.text     "description"
+  end
 
   create_table "locations", force: :cascade do |t|
     t.string   "name"
@@ -25,32 +104,15 @@ ActiveRecord::Schema.define(version: 20161117055333) do
     t.string   "imgurl"
     t.string   "imgplaceholder"
     t.datetime "timestamp"
-<<<<<<< HEAD
   end
 
-  create_table "tokimons", force: :cascade do |t|
-    t.string   "tokiname"
-    t.string   "tokicolour"
-    t.integer  "tokiweight"
-    t.integer  "tokiheight"
-    t.integer  "tokifly"
-    t.integer  "tokifight"
-    t.integer  "tokiwater"
-    t.integer  "tokielectric"
-    t.integer  "tokiice"
-    t.integer  "tokitotal"
-    t.integer  "trainer_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "trainers", force: :cascade do |t|
-    t.string   "trainame"
-    t.integer  "trailevel"
+  create_table "ratings", force: :cascade do |t|
+    t.string   "comment"
+    t.integer  "rating"
+    t.string   "prof_name"
+    t.string   "user_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-=======
->>>>>>> cfe0088... merge with locationhis
   end
 
   create_table "users", force: :cascade do |t|
@@ -62,13 +124,14 @@ ActiveRecord::Schema.define(version: 20161117055333) do
     t.integer  "location_id"
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
-    t.boolean  "admin",             default: false
     t.string   "remember_digest"
     t.string   "activation_digest"
     t.boolean  "activated",         default: false
     t.datetime "activated_at"
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
+    t.boolean  "admin",             default: false
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
   create_table "widgets", force: :cascade do |t|

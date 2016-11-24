@@ -13,20 +13,24 @@ User.create!(fname:  "Admin",
              email: "admin@sample.org",
              password:              "adminadmin",
              password_confirmation: "adminadmin",
-             admin: true)
+             admin: true,
+             activated: true)
 
 User.create!(fname:  "User1",
                    lname:"Example User",
              email: "ex1@sample.org",
              password:              "user1user1",
-             password_confirmation: "user1user1")
+             password_confirmation: "user1user1",
+             activated: true)
 User.create!(fname:  "User2",
                    lname:"Example User",
              email: "ex2@sample.org",
              password:              "user2user2",
-             password_confirmation: "user2user2")
+             password_confirmation: "user2user2",
+             activated: true)
 User.create!(fname:  "User3",
                    lname:"Example User",
              email: "ex3@sample.org",
              password:              "user3user3",
-             password_confirmation: "user3user3")
+             password_confirmation: "user3user3",
+             activated: true)

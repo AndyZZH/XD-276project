@@ -1,7 +1,18 @@
 <% provide(:title, @user.fname) %>
-<h1>
-  <%= gravatar_for @user %>  
-</h1><br><br>
+
+<h3>Locations visited:</h3>
+
+<% @user.locations.each do |location| %>
+
+  <h3><%= location.name %></h3>
+      <% if (location.imgurl) %>
+        <p> <%= image_tag location.imgurl, class: "img-thumbnail" %> </p>
+      <% else %>
+      
+        <p><%= image_tag 'http://bit.ly/2fkkakw', class: "img-thumbnail" %></p>
+      <% end %>
+      <h3>Visited At <%= location.timestamp %></h3>
+  <br />
 
 <table class=" table table-striped sortable">
   <thead>
@@ -28,22 +39,6 @@
    
  </tbody>
 
-
-
-
-<h2 align="left">Locations visited:</h2>
-
-<% @user.locations.each do |location| %>
-
-  <h1><%= location.name %></h1>
-      <% if (location.imgurl) %>
-        <p> <%= image_tag location.imgurl, class: "img-thumbnail" %> </p>
-      <% else %>
-      
-        <p><%= image_tag 'http://bit.ly/2fkkakw', class: "img-thumbnail" %></p>
-      <% end %>
-      <p>Visited At <%= location.timestamp %></p>
-  <br />
 <% end %>
 
 
