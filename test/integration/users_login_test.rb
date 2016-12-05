@@ -45,10 +45,5 @@ end
 
   end
 
-  test "login without remembering" do
-    log_in_as(@user, remember_me: '')
-    assert_nil cookies['remember_token']
-  end
-
 
 end

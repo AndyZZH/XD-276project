@@ -3,6 +3,7 @@
   <tr>
     <th>Position</th>
     <th>Name</th>
+    <th>Avatar</th>
     <th>Email Address</th>
     <th>Points</th>
     <th>Rank</th>
@@ -14,7 +15,10 @@
      <tr>
        <td class="vert-align"><%= @count %></td>
        <% @count += 1 %>
-      <td class="vert-align"><%= link_to "#{ user.fname } #{ user.lname }", user_path(user.id) %></td>
+      <td class="vert-align"><%= link_to "#{ user.fname }", user_path(user.id) %></td>
+      <td class="vert-align">
+        <%= image_tag current_user.avatar.url(:thumb), :class=> 'img-circle'%>
+      </td>
       <td class="vert-align"><%= user.email %></td>
       <% if user.point != nil %>
       <td class="vert-align"><%= user.point %></td>
@@ -27,6 +31,7 @@
       <% else %>
       <td class="vert-align">Not Ranked </td>
       <% end %>
+
     </tr>
 
  </tbody>

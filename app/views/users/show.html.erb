@@ -1,12 +1,12 @@
 <% provide(:title, @user.fname) %>
 <h1>
 
-  <%= image_tag @user.avatar.url(:thumb) %>
+  <%= image_tag @user.avatar.url(:thumb), :class=> 'img-circle'  %>
   <%= @user.fname %>
   <% if @user.rankicon %>
   <%= image_tag @user.rankicon, height: '70', width: '70' %>
   <% end %>
-</h1> 
+</h1>
 
 <table class=" table table-striped sortable">
   <thead>
@@ -38,7 +38,6 @@
   <%= render 'shared/stats' %>
 </section>
 
- 
 
  <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
@@ -49,11 +48,11 @@
       </ol>
       <p><%= will_paginate @reviews, :param_name => 'reviews_page'%></p>
     <% end %>
-    
+
   </div>
 
 
-  <div class="col-md-8">     
+  <div class="col-md-8">
     <% if @user.locations.any? %>
       <h3>Locations visited (<%= @user.locations.count %>)</h3>
       <ol class="reviews">
@@ -62,7 +61,3 @@
      <p><%= will_paginate @locations, :param_name => 'locations_page' %></p>
     <% end %>
   </div>
-
- 
-
-  

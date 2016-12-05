@@ -1,6 +1,6 @@
 <div class="col-xs-6 col-lg-4">
 
-  <%= link_to gravatar_for(review.user, size: 50), review.user %>
+  <%= image_tag current_user.avatar.url(:thumb), :class=> 'img-circle' %>
   <span class="user"><%= link_to review.user.fname, review.user %></span>
   <span class="content"><%= review.content %></span>
   <span class="timestamp">
@@ -13,4 +13,3 @@
 
 
 </div>
-
