@@ -17,7 +17,7 @@
        <% @count += 1 %>
       <td class="vert-align"><%= link_to "#{ user.fname }", user_path(user.id) %></td>
       <td class="vert-align">
-        <%= image_tag current_user.avatar.url(:thumb), :class=> 'img-circle'%>
+        <%= image_tag user.avatar.url(:thumb), :class=> 'img-circle'%>
       </td>
       <td class="vert-align"><%= user.email %></td>
       <% if user.point != nil %>
