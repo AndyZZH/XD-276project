@@ -15,7 +15,8 @@ module XD276project
 
 	# Include the authenticity token in remote forms.
     config.action_view.embed_authenticity_token_in_remote_forms = true
-
+    #Rails 4 to serve the assets
+    config.serve_static_assets = true
 
   end
 end
