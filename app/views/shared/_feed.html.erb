@@ -1,8 +1,13 @@
 <% if @feed_items %>
-  <ol class="reviews">
-    <%= render @feed_items %>
-  </ol>
-  <%= will_paginate @feed_items %>
-  <% else %>
+  <div class="col-md-12">
+    <ol class="reviews">
+      <%= render @feed_items %>
+    </ol>
+  </div>
+  <br>
+  <div class="col-md-12 text-center">
+    <%= will_paginate @feed_items %>
+  </div>
+<% else %>
   <h3> You haven't added any review yet.</h3>
 <% end %>
