@@ -39,26 +39,35 @@
 </section>
 
 
- <div class="col-md-8">
+ <div class="col-md-12">
     <%= render 'follow_form' if logged_in? %>
-    <% if @user.reviews.any? %>
-      <h3>Reviews (<%= @user.reviews.count %>)</h3>
-      <ol class="reviews">
-        <%= render @reviews %>
-      </ol>
+</div>
+
+
+<% if @user.reviews.any? %>
+  <div class="col-xs-12">
+    <h3>Reviews (<%= @user.reviews.count %>)</h3>
+    <ol class="reviews">
+      <%= render @reviews %>
+    </ol>
     </br>
-      <h6><%= will_paginate @reviews, :param_name => 'reviews_page' %></h6>
-    <% end %>
   </div>
+  <div class="col-xs-12 text-center">
+    <h6><%= will_paginate @reviews, :param_name => 'reviews_page' %></h6>
+  </div>
+<% end %>
 
 
-  <div class="col-md-8">
-    <% if @user.locations.any? %>
-      <h3>Locations visited (<%= @user.locations.count %>)</h3>
-      <ol class="reviews">
-        <%= render @locations %>
-      </ol>
-      </br>
-      <h6><%= will_paginate @locations, :param_name => 'locations_page' %></h6>
-    <% end %>
+
+<% if @user.locations.any? %>
+  <div class="col-xs-12">
+    <h3>Locations visited (<%= @user.locations.count %>)</h3>
+    <ol class="reviews">
+      <%= render @locations %>
+    </ol>
+  </br>
   </div>
+  <div class="col-xs-12 text-center">
+    <h6><%= will_paginate @locations, :param_name => 'locations_page' %></h6>
+  </div>
+<% end %>
