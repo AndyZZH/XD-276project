@@ -4,7 +4,7 @@
 ## Project Proposal
 
 # Introduction:
-Deciding what eat for dinner can be hard. Whether they are with friends, or alone, many have spent a lot of time on organizing. These people would usually use websites such as Yelp or Zomato to find lists of many restaurants that may suit their choice. This can lead one to be paralyzed by choice, or disagreements between friends on where and what to eat. Rand & Run aims to solve this dilemma in a novel way.
+Deciding what eat for dinner can be hard. Whether they are with friends, or alone, they have spent a lot of time on organizing. These people would usually use websites such as Yelp or Zomato to find lists of many restaurants that may suit their choice. This can lead one to be paralyzed by choice, or disagreements between friends on where and what to eat. Rand & Run aims to solve this dilemma in a novel way.
 
 # Objectives:
 Rand & Run is a restaurant finder with a twist. When prompted, this application will give users a random restaurant chosen from recommendations which are based on users' current location. Upon receiving this restaurant, the user is given 24 hours to go to it. If they do, they can sign onto the app on their phone, and notify it that they have arrived, for which they will receive points. With this, we hope to remove uncertainties and arguments over what to eat by only giving one choice, and we will give incentive to actually go to the restaurant by giving out points, making it like a game.
