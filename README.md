@@ -7,12 +7,20 @@
 Everyone has the problem of deciding what to eat for dinner. Whether they are with friends, or alone, many have spent a lot of time on organizing. These people would usually use websites such as Yelp or Zomato to find lists of many restaurants that may suit their choice. This can lead one to be paralyzed by choice, or disagreements between friends on where and what to eat. Rand & Run aims to solve this dilemma in a novel way.
 
 # Objectives:
--Rand & Run will give users a random restaurant chosen from recommendations based on users' current location. 
-	-User have up to 24 hours after reserve the restaurant.
-	-The app will notify the user upon arriving and receive points automatically.
-	-With this, we hope to remove uncertainties and arguments over what to eat by only giving one choice, and we will give incentive 	  to actually go to the restaurant by giving out points, making it like a game.
+* Rand & Run will give users a random restaurant chosen from recommendations based on users' current location. 
+	* User have up to 24 hours after reserve the restaurant.
+	* The app will notify the user upon arriving and receive points automatically.
+	* With this, we hope to remove uncertainties and arguments over what to eat by only giving one choice, and we will give incentive 	  to actually go to the restaurant by giving out points, making it like a game.
 
-Our app will feature many things such as a ranked global leaderboard showcasing who has the most points, the ability to share your point status on social media, and specialized website aesthetics for the user based on his or her points. A user will be able to specify something about what they want such as a max distance and a price range.  When a user is given a random restaurant, they will be able to see the location on a map, along with their own location. Rand&Run is mobile friendly so people can do everything on their phones. More features will be added around activities on points earned. 
+* Our features
+	* a ranked global leaderboard showcasing who has the most points
+	* the ability to share your point status on social media
+	* specialized website aesthetics for the user based on his or her points
+	* A user will be able to adjust the max distance and a price range.
+	* Restaurant information will be shown
+	* Rand&Run support mobile platform. 
+
+More features will be added around activities on points earned. 
 	
 # Plans of Action:	
 As outlined above, we hope that the main users of this project will be the average person who can relate to having trouble figuring out what to eat or do. Many people resort to doing things such as choosing random restaurant names out of a hat, and we are hoping that this app can replace that, along with improving the experience. With the huge success of Pokemon Go this past summer, we can see that people are very open to the idea of location based mobile games, and we are looking to this proven concept to also leverage our app. We will design our app to be accessible to as many people as possible, making it easy to read and simple to work with. Other than the main users, admins of the site will be able to see and manage all the users in the system.
