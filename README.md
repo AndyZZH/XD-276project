@@ -32,23 +32,23 @@ With the huge success of Pokemon Go this past summer, we can see that people are
 
 # User stories:
 ## Account system:
-*   Account system
-    *   []  As a user, I can sign up with my email. 
-        *   [] If user input the wrong format of email, there will be a specific error message to ask them to type again 
-        *   [] Confirmation of the account password. If it doesn't match the password, there will be a specific error message to ask them to type again
-        *   [] The password should have a minimal length of 6. If user input a password with length less than 6, there will be a specific error message to ask them to type again
-        *   [] If the email or account name is already exist, there will be a specific error message to ask them to type again
-            *  [] **optional** test the user name exists or not
-        *   [] **optinoal** The user sign up successfully will receive a activation email to activate the account
-    *   []  As a user with an account, I can log in with the correct email and password.
-        *   [] If the email or password doesn't match, there will be a specific error message to ask them to type again
-        *   [] If user input the wrong format of email, there will be a specific error message to ask them to type again 
-        *   [] The password should have a minimal length of 6. If user input a password with length less than 6, there will be a specific error message to ask them to type again
-    *   []  As a user, I can change my password when I forget my password
-        *   []  Send a change password link to the user email when user forget the password. 
-        *   []  **Optional** What if users forget their account(email)
-    *   []  Use cookies to remember user's email so they don't have to type it every time
-        *   []  Provide a "remember my account" checkbox option in the log in page
+* Account system
+	* As a user, I can sign up with my email. 
+        * If user input the wrong format of email, there will be a specific error message to ask them to type again 
+        * Confirmation of the account password. If it doesn't match the password, there will be a specific error message to ask them to type again
+        * The password should have a minimal length of 6. If user input a password with length less than 6, there will be a specific error message to ask them to type again
+        * If the email or account name is already exist, there will be a specific error message to ask them to type again
+        *  **optional** test the user name exists or not
+        *  **optional** The user sign up successfully will receive a activation email to activate the account
+    	*  As a user with an account, I can log in with the correct email and password.
+        *  If the email or password doesn't match, there will be a specific error message to ask them to type again
+        *  If user input the wrong format of email, there will be a specific error message to ask them to type again 
+        *  The password should have a minimal length of 6. If user input a password with length less than 6, there will be a specific error message to ask them to type again
+    	* As a user, I can change my password when I forget my password
+        * Send a change password link to the user email when user forget the password. 
+        * **Optional** What if users forget their account(email)
+        * Use cookies to remember user's email so they don't have to type it every time
+        * Provide a "remember my account" checkbox option in the log in page
         
 JS gmaps bug:
 website:
