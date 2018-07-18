@@ -23,12 +23,13 @@ Everyone has the problem of deciding what to eat for dinner. Whether they are wi
 More features will be added around activities on points earned. 
 	
 # Plans of Action:	
-We are targeting users that have trouble figuring out what to eat. Our application is a convenient tool of selecting restaurant randomly. With the huge success of Pokemon Go this past summer, we can see that people are very open to the idea of location based mobile games, and we are looking to this proven concept to also leverage our app. We will design our app to be accessible to as many people as possible, making it easy to read and simple to work with. Other than the main users, admins of the site will be able to see and manage all the users in the system.
+# Plans of Action:	
+We are targeting users that have trouble figuring out what to eat. Our application is a convenient tool of selecting restaurant randomly. We will design our app with easy accessibility. Admin account feature is added and able to manage all the users in the system.
 	
 To accomplish this project, we are going to have to utilize a number of APIs from various companies. Yelp and Google Maps APIs will probably be the backbone of the app, with their restaurant finding and geographical locator features respectively. In order to implement social features, we will also need to utilize the APIs of Facebook and Twitter.
 
 # Conclusion
-By creating Rand & Run, we are looking to attract users by being simple to use with sleek, minimalistic UI. Although there are many restaurant finders out there, Rand & Run is unique with its location based gameplay implementation, and we hope that we can make Friday nights a little more fun for everyone with a fun way of solving a common problem.
+With the huge success of Pokemon Go this past summer, we can see that people are very open to the idea of location based mobile games, and we are looking to this proven concept to also leverage our app.By creating Rand & Run, we are looking to attract users by being simple to use with sleek, minimalistic UI. Although there are many restaurant finders out there, Rand & Run is unique with its location based gameplay implementation, and we hope that we can make Friday nights a little more fun for everyone with a fun way of solving a common problem.
 
 # User stories:
 ## Account system:
