@@ -7,9 +7,9 @@ Everyone has the problem of deciding what to eat for dinner. Whether they are wi
 
 ### Objectives:
 * Rand & Run will give users a random restaurant chosen from recommendations based on users' current location. 
-	* User have up to 24 hours after reserve the restaurant.
-	* The app will notify the user upon arriving and receive points automatically.
-	* With this, we hope to remove uncertainties and arguments over what to eat by only giving one choice, and we will give incentive 	  to actually go to the restaurant by giving out points, making it like a game.
+	* User has up to 24 hours after reserving the restaurant.
+	* The app will notify the user upon arriving and give points to the user automatically.
+	* With this, we hope to remove uncertainties and arguments over what to eat by only giving one choice, and we will give incentive to actually go to the restaurant by giving out points, making it like a game.
 
 * Our features
 	* a ranked global leaderboard showcasing who has the most points
@@ -22,9 +22,9 @@ Everyone has the problem of deciding what to eat for dinner. Whether they are wi
 More features will be added around activities on points earned. 
 	
 ### Plans of Action:	
-We are targeting users that have trouble figuring out what to eat. Our application is a convenient tool of selecting restaurant randomly. We will design our app with easy accessibility. Admin account feature is added and able to manage all the users in the system.
+We are targeting users that have trouble figuring out what to eat. Our application is a convenient tool of selecting restaurant randomly. We will design our app with high accessibility. Admin account feature is added and able to manage all the users in the system.
 	
-To accomplish this project, we are going to have to utilize a number of APIs from various companies. Yelp and Google Maps APIs will probably be the backbone of the app, with their restaurant finding and geographical locator features respectively. In order to implement social features, we will also need to utilize the APIs of Facebook and Twitter.
+To accomplish this project, we have to utilize a number of APIs from various companies. Yelp and Google Maps APIs will probably be the backbone of the app, with their restaurant finding and geographical locator features respectively. In order to implement social features, we need to utilize the APIs of Facebook and Twitter.
 
 ### Conclusion:
 With the huge success of Pokemon Go this past summer, we can see that people are very open to the idea of location based mobile games, and we are looking to this proven concept to also leverage our app. We want to attract users' attention by the minimalistic user interface. There are many restaurant finders out there, Rand & Run is unique because it is a location based gameplay implementation, and we hope that we can make Friday nights a little more fun for everyone with a fun way of solving a common problem.
